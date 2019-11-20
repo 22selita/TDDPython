@@ -43,23 +43,7 @@ class HomePageTest(TestCase):
         self.assertIn('itemey 2', response.content.decode())   
 
         
-    # def test_home_page_returns_correct_html(self):
-        # response = self.client.get('/')
-        
-        # request = HttpRequest()
-        # response = home_page(request)
-        # html = response.content.decode('utf8')
-        # expected_html=render_to_string('home.html')
-        # self.assertTrue(html.startswith('<html>'))
-        # self.assertIn('<title>To-Do lists</title>', html)
-        # self.assertTrue(html.endswith('</html>'))
-        # self.assertTrue(html.strip().endswith('</html>'))
-        # self.assertEqual(html,expected_html)
-        # self.assertTemplateUsed(response, 'home.html')
-        
-    
    
-    
 class ItemModelTest(TestCase):
 
     def test_saving_and_retrieving_items(self):
