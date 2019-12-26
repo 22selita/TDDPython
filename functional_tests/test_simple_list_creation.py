@@ -1,7 +1,8 @@
+from .base import FunctionalTest
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from .base import FunctionalTest
-import time
+
 
 class NewVisitorTest(FunctionalTest):
 
@@ -26,10 +27,10 @@ class NewVisitorTest(FunctionalTest):
         # is tying fly-fishing lures)
         inputbox.send_keys('Buy peacock feathers')
          
-         # When she hits enter, the page updates, and now the page lists
-         # "1: Buy peacock feathers" as an item in a to-do list table
+        # When she hits enter, the page updates, and now the page lists
+        # "1: Buy peacock feathers" as an item in a to-do list table
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(3)
+        time.sleep(1) #3)
         self.check_for_row_in_list_table('1: Buy peacock feathers')
         
         
